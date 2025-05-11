@@ -1,9 +1,8 @@
 pipeline {
-    agent any
-
-    triggers {
-        pollSCM('* * * *')  // Poll every 5 mins as fallback
-    }
+  agent any
+  triggers {
+    cron('H * * * *')
+  }
 
     stages {
         stage('Checkout') {
