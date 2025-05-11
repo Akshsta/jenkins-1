@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Hello, Jenkins! This is trial1'
+                echo 'Hello, Jenkins! This is trial2'
             }
         }
     }
