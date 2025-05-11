@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     triggers {
-        pollSCM('H/5 * * * *')  // Poll every 5 mins as fallback
+        pollSCM(' * * * *')  // Poll every 5 mins as fallback
     }
 
     stages {
