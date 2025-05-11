@@ -1,34 +1,14 @@
 pipeline {
-  agent any
-  triggers {
-    cron('H * * * *')
-  }
+    agent any
+
+    triggers {
+        pollSCM('* * * * *')
+    }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Akshsta/jenkins-1.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                echo "Building the project..."
-                // your build commands here (e.g., mvn clean install)
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo "Running tests..."
-                // your test commands here
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo "Deploying to production..."
-                // your deployment steps here
+                echo 'Hello, Jenkins!'
             }
         }
     }
